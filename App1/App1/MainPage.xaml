@@ -4,8 +4,27 @@
              xmlns:local="clr-namespace:App1"
              x:Class="App1.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
+    <StackLayout BackgroundColor="Ivory">
+        <ActivityIndicator x:Name="activityIndicator" Color="Black" IsRunning="False" />
+
+        <Label Text="Lyrica"
            VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+           HorizontalOptions="Center" 
+           FontSize="Large"
+           />
+
+        <Label Text="Artist" />
+        <Entry x:Name="E_Artist"></Entry>
+
+        <Label Text="Song title" />
+        <Entry x:Name="E_SongTitle"></Entry>
+
+        <Button Clicked="Btn_Search" Text="Get Lyric!"/>
+
+        <ScrollView>
+            <Label x:Name="L_LyricText" BackgroundColor="AliceBlue"            
+            />
+        </ScrollView>
+    </StackLayout>
 
 </ContentPage>
